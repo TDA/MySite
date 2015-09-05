@@ -1,0 +1,37 @@
+$('#projects').waypoint(function(direction){
+	 $('nav a.current').removeClass('current');
+	 $('nav a[href="#projects"]').addClass('current');
+	 calcnav();
+	 $('#helper').addClass('help');
+	},{offset:30});
+
+$('#faqs').waypoint(function(direction){
+	 $('nav a.current').removeClass('current');
+	 $('nav a[href="#faqs"]').addClass('current');
+	 calcnav();
+	 
+	},{offset:30});
+	
+	
+$('#abt').waypoint(function(direction){
+	 $('nav a.current').removeClass('current');
+	 $('nav a[href="#abt"]').addClass('current');
+	 calcnav();
+	 
+	},{offset:30});
+	
+	
+$('#services').waypoint(function(direction){
+	 $('nav a.current').removeClass('current');
+	 $('nav a[href="#services"]').addClass('current');
+	 calcnav();
+	 
+	},{offset:30});	
+$('#contact').waypoint(function(direction){
+	 $('nav a.current').removeClass('current');
+	 $('nav a[href="#contact"]').addClass('current');
+	 calcnav();
+	 
+	},{offset:30});	
+	
+	

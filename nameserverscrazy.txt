@@ -1,0 +1,2 @@
+Nameserver 1 	ns1.crazydomains.com	27.124.125.7 	Delete
+Nameserver 2 	ns2.crazydomains.com 	27.124.125.8

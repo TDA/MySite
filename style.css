@@ -1,0 +1,285 @@
+html,body{
+	height:100%;
+	width:100%;
+	margin:0;
+	perspective:600px;
+}
+body{
+	overflow:hidden;
+	font-size:1.25em;
+	}
+p:first-letter{
+	font-size:4em;
+	float:left;
+}
+p{
+text-align:justify;
+width:600px;
+display:inline-block;
+}
+p+img{
+border:none;
+width:200px;
+height:auto;
+display:inline-block;
+}
+#gall img{
+	border-radius:50%;
+	width:200px;
+	height:200px;
+	transition:transform 3s ease,
+			left 1s ease;	
+	position:relative;
+}
+#gall img:nth-child(2){
+	transition-delay:3s;
+}
+#gall img:nth-child(3){
+	transition-delay:2s;
+}
+#gall img:nth-child(4){
+	transition-delay:1s;
+}
+#gall.flow img{
+	transform:scale(0.1);
+}
+#gall.flow img:nth-child(2){
+	left:-200px;
+}
+#gall.flow img:nth-child(3){
+	left:-400px;
+}
+#gall.flow img:nth-child(4){
+	left:-600px;
+}
+#gall.flow img:nth-child(5){
+	left:-800px;
+}
+#gall.fall img{
+	left:0;
+	transform:scale(1);	
+}
+.page{
+	height:100%;
+	width:100%;
+	padding-left:120px;
+}
+#page1{
+	background:#fff;
+}
+#page2{
+	background:#675;
+}
+#page3{
+	background:#399;
+}
+#page4{
+	background:#00F;
+}
+#page5{
+	background:#3F3;
+}
+nav{
+	position:fixed;
+	left:-120px;
+	top:0px;
+	z-index:20;
+	bottom:0;
+	background:#999;
+	border-right:solid 50px black;
+	width:120px;
+}
+nav:hover{
+	left:0;
+}
+nav a{
+	color:#fff;
+}
+nav:hover~#cont{
+	transform:rotateY(30deg) translateX(60px);
+}
+
+#cont,.page,nav{
+	transition:all 1s ease;
+	}
+a[id="page1"]:target ~ #cont .page{
+	-webkit-transform:translateY(0);
+	transform:translateY(0);
+}
+a[id="page2"]:target ~ #cont .page{
+	-webkit-transform:translateY(-100%);
+	transform:translateY(-100%);
+}
+a[id="page3"]:target ~ #cont .page{
+	-webkit-transform:translateY(-200%);
+	transform:translateY(-200%);
+}
+a[id="page4"]:target ~ #cont .page{
+	-webkit-transform:translateY(-300%);
+	transform:translateY(-300%);
+}
+a[id="page5"]:target ~ #cont .page{
+	-webkit-transform:translateY(-400%);
+	transform:translateY(-400%);
+}
+.panels section{
+	min-height:200px;
+	min-width:200px;
+	display:inline-block;
+	color:#FFF;
+	position:relative;
+	margin:0;
+	transition:all 0.4s ease;
+}
+.panels section span{
+	opacity:0;
+	display:inline-block;
+	background:rgba(0,0,0,0.5);
+	transition:all 1s ease;
+	height:50%;
+	position:absolute;
+	top:50%;
+	width:100%;
+	margin:0;
+	left:0;
+}
+.panels section:hover{
+	transform:scale(1.1);
+	z-index:2;
+}
+.panels section:hover span{
+	opacity:1;
+}
+
+#p1{
+	background:#F3C;
+}
+#p2{
+	background:#06C;
+}
+#p3{
+	background:#F6C;
+}
+#p4{
+	background:#43C;
+}
+#p5{
+	background:#93C;
+}
+#page4{
+	perspective:800px;
+}
+.slidecont{
+	overflow:hidden;
+	width:360px;
+	display:inline-block;
+}
+.slide{
+	margin-top:3em;
+	height:300px;
+	width:1800px;
+	display:inline-block;
+}
+.slide img{
+	height:auto;
+	width:360px;
+	display:inline-block;
+	animation:slider ease-in-out 15s alternate-reverse infinite;
+}
+#slideleft{
+	transform:rotateY(60deg) translateX(-20px) translateY(-20px);
+}
+#slideright{
+	transform:rotateY(-60deg) translateX(20px) translateY(-20px);
+}
+@keyframes slider{
+0%{	transform:translateX(0);}
+25%{transform:translateX(-100%);}
+50%{transform:translateX(-200%);}
+75%{transform:translateX(-300%);}
+100%{transform:translateX(-400%);}
+}
+
+@keyframes slideup{
+0%{	transform:translateY(0);}
+25%{transform:translateY(-100%);}
+50%{transform:translateY(-200%);}
+75%{transform:translateY(-300%);}
+100%{transform:translateY(-400%);}
+}
+
+
+@media all and (max-width:600px){
+
+.slide img{
+	height:300px;
+	width:360px;
+	display:block;
+	animation:slideup ease-in-out 15s alternate-reverse infinite;
+}
+#slideleft{
+	transform:rotateX(-60deg);
+}
+#slideright{
+	transform:rotateX(60deg);
+}	
+.slide{
+	display:block;
+}
+	
+.page{
+	height:200%;
+	overflow:scroll;
+}
+body{
+	overflow:visible;
+}
+}
+
+
+.lines{
+	
+	height:3px;
+	width:60px;
+	background:#0CF;
+	position:absolute;
+	display:block;
+}
+#line1{
+	top:10px;
+	left:0;
+	animation:flowleft 5s ease 1 alternate;
+	animation-fill-mode:forwards;
+}
+#line2{
+	top:10px;
+	left:1200px;
+	transform:rotate(90deg);
+	opacity:0;
+	animation:flowdown 4s ease 1 5s alternate;
+	animation-fill-mode:forwards;
+	width:2px;
+}
+#line3{
+	top:0;
+	left:50%;
+}
+#line4{
+	top:50%;
+	left:0;
+}
+@keyframes flowleft{
+	0%{transform:translate(0); width:60px;}
+	100%{transform:translateX(1200px);
+	opacity:0;
+	width:2px;}
+	}
+
+@keyframes flowdown{
+	0%{transform:translateY(0) rotate(90deg);opacity:0;width:2px;}
+	3%{opacity:1;}
+	90%{opacity:1;}
+	100%{transform:translateY(800px) rotate(90deg);
+	opacity:0;
+	width:60px;}
+	}

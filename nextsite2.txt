@@ -1,0 +1,20 @@
+intro page. top logo header , center. full page img.(streatch ) and a buttom at bot.. hq, don have to code urself.. suttufy
+and the main page. as said.. 5 menus. scattered
+and a menu bar.
+
+
+its lil simlar da.
+5 menus
+who we are
+wat we do
+our streanght
+video tour.
+to reach us
+all these shud be in scattered manner.
+
+
+top .header for logo.
+color tone. differnt shades of blue.
+and use jquerry for the menus. to make it a lil animated.
+and.. another page. with a center box ... covering almost 80% of widht and height with random text.
+and bottom menu. which shud b realy diff !

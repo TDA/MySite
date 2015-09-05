@@ -1,0 +1,90 @@
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+    <meta charset="iso-8859-9">
+</head>
+<body>
+<nav>
+	<ul>
+		<li><a href="#page1" class="ancho">page1</a></li>
+		<li><a href="#page2" class="ancho">page2</a></li>
+		<li><a href="#page3" class="ancho">page3</a></li>
+		<li><a href="#page4" class="ancho">page4</a></li>
+		<li><a href="#page5" class="ancho">page5</a></li>
+	</ul>    
+</nav>
+
+<a id="page1"></a>
+<a id="page2"></a>
+<a id="page3"></a>
+<a id="page4"></a>
+<a id="page5"></a>
+
+<div id="cont">
+	<div class="page" id="page1">a
+    	<div class="panels">
+        	<section id="p1">f<span class="over">this is the desc 1</span></section>
+            <section id="p2">f<span class="over">this is the desc 1</span></section>
+            <section id="p3">f<span class="over">this is the desc 1</span></section>
+            <section id="p4">f<span class="over">this is the desc 1</span></section>
+            <section id="p5">f<span class="over">this is the desc 1</span></section>
+            
+           
+        </div>
+         <div class="lines" id="line1"></div>
+         <div class="lines" id="line2"></div>
+           
+    </div>
+    
+	<div class="page" id="page2">b
+    <p>welcomes to the pages of asias..more dummy text...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet...lorem ipsum dolor imet</p><img src="Images/css3badge.png">
+    </div>
+	<div class="page" id="page3">gallery
+    <div id="gall" class="flow">
+    <img src="Images/products.jpg">
+    <img src="Images/fvalley.jpg">
+    <img src="Images/hagens-full.png">
+    <img src="Images/Android_Robotbody.png">
+    </div>
+    </div>
+	<div class="page" id="page4">d
+    <section class="slidecont" id="slideleft">
+    <section class="slide" >
+    <img src="Images/fvalley.jpg" alt="1"><img src="Images/hagens-full.png" alt="2"><img src="Images/kratos-symp1.png" alt="3"><img src="Images/mediaplex.jpg" alt="4"><img src="Images/products.jpg" alt="5">
+    </section>
+    </section>
+    
+    <section class="slidecont" id="slidecentre">
+    <section class="slide" >
+    <img src="Images/hagens-full.png" alt="2"><img src="Images/kratos-symp1.png" alt="3"><img src="Images/mediaplex.jpg" alt="4"><img src="Images/products.jpg" alt="5"><img src="Images/fvalley.jpg" alt="1">
+    </section>
+    </section>
+    
+    <section class="slidecont" id="slideright">
+    <section class="slide" >
+    <img src="Images/kratos-symp1.png" alt="3"><img src="Images/mediaplex.jpg" alt="4"><img src="Images/products.jpg" alt="5"><img src="Images/fvalley.jpg" alt="1"><img src="Images/hagens-full.png" alt="2">
+    </section>
+    </section>
+    
+    </div>
+	<div class="page" id="page5">e</div>
+    </div>
+
+<script>
+var gall=document.getElementById('gall');
+gall.onclick=function(){	this.className=(this.className=="flow")?"fall":"flow";	};
+
+var body=document.getElementsByName('body')[0];
+for(var i=0;i<20;i++){
+	var newDiv=createElement('div');
+	var x=Math.ceil(Math.random()*1200);
+	var y=Math.ceil(Math.random()*400)
+	newDiv.style.top=x;
+	newDiv.style.left=y;
+	newDiv.className="lines";
+	body.appendChild(newDiv);
+	}
+</script>
+</body>
+
+</html>
